@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ClaimGuard Business Plan</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">ClaimGuard Business Plan</h1>
+</header>
+<h1 id="claimguard-business-plan">ClaimGuard Business Plan</h1>
+<h2 id="executive-summary">Executive summary</h2>
+<p>ClaimGuard is a denial-prevention and appeal-operations SaaS for
+independent medical practices. The product scans high-value claims and
+prior authorization requests before submission, predicts payer-specific
+denial risk, assigns the missing documentation as work items, and
+produces appeal packets when a denial happens.</p>
+<p>The wedge is intentionally narrow: specialty practices with
+expensive, documentation-heavy services such as cardiology imaging,
+orthopedic imaging, infusion therapy, home health, and sleep medicine.
+These practices feel the pain of payer automation but rarely have
+enterprise revenue-cycle teams or custom EHR integrations.</p>
+<p>ClaimGuard starts as a lightweight workflow layer that works from
+structured forms and CSV exports, then expands into EHR/clearinghouse
+integrations and CMS prior-authorization API readiness.</p>
+<h2 id="market-problem">Market problem</h2>
+<p>Healthcare providers are losing margin to administrative claim
+review, denial rework, and prior authorization delays.</p>
+<ul>
+<li>Premier reported that claims adjudication cost providers $25.7B in
+2023, a 23% increase from the prior year, and said 70% of denials were
+ultimately overturned only after costly review cycles.</li>
+<li>CMS finalized interoperability and prior authorization rules that
+require impacted payers to improve API-based access, report usage
+metrics, and support faster, more transparent prior authorization
+workflows.</li>
+<li>HFMA has emphasized that denial prevention depends on standardized
+categories, trend data, and root-cause workflows, not only post-denial
+firefighting.</li>
+<li>The American Hospital Association cited nearly 15% initial denial
+rates for private-payer claims and $19.7B spent by hospitals and health
+systems in 2022 trying to overturn denials.</li>
+</ul>
+<p>Sources: - Premier:
+https://premierinc.com/newsroom/policy/claims-adjudication-costs-providers-257-billion-18-billion-is-potentially-unnecessary-expense
+- CMS final rule:
+https://www.cms.gov/initiatives/burden-reduction/overview/interoperability/policies-regulations/cms-interoperability-prior-authorization-final-rule-cms-0057-f
+- HFMA denial metrics:
+https://www.hfma.org/guidance/standardizing-denial-metrics-revenue-cycle-benchmarking-process-improvement/
+- AHA market scan:
+https://www.aha.org/aha-center-health-innovation-market-scan/2024-04-02-payer-denial-tactics-how-confront-20-billion-problem</p>
+<h2 id="customer-and-icp">Customer and ICP</h2>
+<p>Primary ICP: - Independent specialty practice groups with 5-75
+providers. - Monthly claim volume of 1,000-20,000 claims. - High-value
+procedures where denials are financially material. - Thin billing teams
+using EHR exports, clearinghouse portals, spreadsheets, and manual payer
+calls.</p>
+<p>Economic buyer: - Practice administrator, RCM manager, CFO, or
+physician-owner.</p>
+<p>Daily users: - Billing specialists, prior authorization coordinators,
+referral coordinators, and practice managers.</p>
+<p>Beachhead specialties: - Cardiology and cardiac imaging. -
+Orthopedics and imaging-heavy musculoskeletal care. - Infusion and
+biologics. - Home health recertification. - Sleep medicine.</p>
+<h2 id="solution">Solution</h2>
+<p>ClaimGuard has four product loops.</p>
+<ol type="1">
+<li>Pre-submission risk scan
+<ul>
+<li>User enters or imports payer, CPT, service, amount, deadline, and
+documentation notes.</li>
+<li>ClaimGuard scores denial risk and identifies payer-specific missing
+evidence.</li>
+<li>Risk is explainable: payer category, high-dollar exposure, missing
+evidence, deadline pressure.</li>
+</ul></li>
+<li>Documentation work queue
+<ul>
+<li>Missing documentation becomes assigned work items.</li>
+<li>Practice managers can see at-risk cases, owners, deadlines, expected
+revenue exposure, and status.</li>
+<li>The app prioritizes claims with the highest risk-adjusted
+dollars.</li>
+</ul></li>
+<li>Appeal packet builder
+<ul>
+<li>For denied claims, ClaimGuard generates the packet checklist:
+clinical notes, payer rule, coding rationale, timeline, physician
+attestation, and submission proof.</li>
+<li>It tracks whether the packet is appeal-ready, submitted, or
+recovered.</li>
+</ul></li>
+<li>Business intelligence
+<ul>
+<li>Admin dashboard shows denial-risk distribution, recovered revenue,
+bottlenecks, payer trends, and team throughput.</li>
+<li>This becomes the renewal story: recovered revenue, fewer days in
+appeal, and cleaner first-pass claims.</li>
+</ul></li>
+</ol>
+<h2 id="product-shipped-in-this-arena-build">Product shipped in this
+arena build</h2>
+<p>The deployed demo includes: - Landing page that explains the business
+and market wedge. - Demo authentication with practice and admin
+accounts. - Practice dashboard with live metrics, work queue, payer
+playbook, claim scanner, risk scoring, and status advancement. - Admin
+dashboard with funnel metrics, business signals, recovered revenue, and
+the same live work queue. - Local browser persistence using
+<code>localStorage</code>, so new cases and status changes survive
+refreshes in the demo environment.</p>
+<h2 id="competitive-landscape">Competitive landscape</h2>
+<p>Competitor categories:</p>
+<ul>
+<li>Enterprise RCM platforms: Optum, Waystar, Experian Health, R1,
+FinThrive.
+<ul>
+<li>Strength: broad integrations and deep enterprise contracts.</li>
+<li>Weakness: long implementation cycles and pricing/complexity
+mismatched to independent practices.</li>
+</ul></li>
+<li>Clearinghouses and EHR modules: Availity, Change Healthcare/Optum,
+athenahealth, eClinicalWorks modules.
+<ul>
+<li>Strength: already in workflow.</li>
+<li>Weakness: often focus on eligibility/submission rather than
+payer-specific denial prevention and appeal orchestration.</li>
+</ul></li>
+<li>Services-led billing companies.
+<ul>
+<li>Strength: done-for-you operations.</li>
+<li>Weakness: labor-intensive, opaque, and not a software-margin
+product.</li>
+</ul></li>
+</ul>
+<p>ClaimGuard positioning: - Lighter than enterprise RCM. - More
+opinionated than spreadsheets. - More prevention-oriented than denial
+cleanup services. - Designed for fast implementation by practices that
+can export claims today.</p>
+<h2 id="business-model">Business model</h2>
+<p>Pricing: - Starter: $499/month per practice, includes 3 users and
+1,000 scanned claims/month. - Growth: $1,499/month, includes 15 users,
+10,000 scanned claims/month, payer playbooks, CSV imports, and admin
+analytics. - Performance add-on: 0.9% of recovered revenue above
+baseline, capped by contract. - Implementation: $1,500 one-time
+onboarding for mapping payer/CPT workflows and historical denial
+categories.</p>
+<p>Why this pricing works: - If one high-value appeal is recovered each
+month, the software can pay for itself. - The base subscription keeps
+revenue predictable. - The performance fee aligns incentives without
+making the practice hand over full billing operations.</p>
+<h2 id="go-to-market">Go-to-market</h2>
+<p>Phase 1: founder-led pilots - Target 20 specialty practices in Texas,
+Arizona, Ohio, Florida, and California. - Offer a 30-day denial-risk
+audit using exported claim and denial data. - Convert audit into a paid
+pilot with ROI report.</p>
+<p>Phase 2: channel partnerships - Partner with boutique billing
+companies serving independent specialty practices. - Give billing
+partners a white-label dashboard and revenue share. - Use specialty
+societies, RCM consultants, and practice administrator communities as
+distribution.</p>
+<p>Phase 3: integration-led expansion - Add EHR/clearinghouse import
+connectors. - Add payer API readiness modules as CMS interoperability
+requirements mature. - Move from prevention workflow into automated
+packet generation and payer-specific analytics.</p>
+<h2 id="financial-projections">Financial projections</h2>
+<p>Assumptions: - Average subscription revenue per practice:
+$1,100/month in year 1, $1,650/month in year 2, $2,050/month in year 3.
+- Implementation fee averages $1,000 net after discounts. - Gross
+margin: 78% year 1, 83% year 2, 86% year 3. - Logo churn: 16% year 1,
+11% year 2, 8% year 3.</p>
+<p>Year 1: - 35 paying practices. - Subscription ARR exiting year:
+$462K. - Implementation revenue: $35K. - Total recognized revenue
+estimate: $265K.</p>
+<p>Year 2: - 155 paying practices. - Subscription ARR exiting year:
+$3.07M. - Total recognized revenue estimate: $1.78M.</p>
+<p>Year 3: - 520 paying practices. - Subscription ARR exiting year:
+$12.79M. - Total recognized revenue estimate: $7.4M.</p>
+<p>Long-term upside: - 5,000 practices at $2,000/month is $120M ARR
+before performance revenue. - The category can expand into payer
+scorecards, outsourced appeal networks, and embedded financing for
+delayed reimbursements.</p>
+<h2 id="roadmap">Roadmap</h2>
+<p>0-30 days: - Harden auth and multi-tenant database. - Add CSV
+import/export and audit trail. - Add denial category taxonomy based on
+HFMA-style definitions.</p>
+<p>31-90 days: - Pilot with 5-10 specialty practices. - Add appeal
+packet PDF generation. - Add payer-specific templates for top five
+payer/service combinations. - Build ROI report and monthly executive
+summary.</p>
+<p>3-6 months: - Integrate with clearinghouse exports. - Add team
+assignments, SLA notifications, and document checklist completion. - Add
+analytics by payer, CPT, physician, and denial category.</p>
+<p>6-12 months: - EHR integrations for top beachhead systems. - Prior
+authorization API readiness module. - AI-assisted clinical letter
+drafting with human approval and compliance controls.</p>
+<h2 id="risks-and-mitigations">Risks and mitigations</h2>
+<p>Risk: EHR integration friction. Mitigation: start with CSV/export
+workflows and high-value manual queues.</p>
+<p>Risk: Complex healthcare compliance. Mitigation: begin as workflow
+software without storing unnecessary PHI in the MVP; add BAA, audit
+logs, and access controls before production pilots.</p>
+<p>Risk: Enterprise incumbents copy features. Mitigation: win on
+specialty-specific templates, speed, and independent-practice
+affordability.</p>
+<p>Risk: Denial rules change by payer. Mitigation: maintain a payer
+playbook library updated from customer outcomes and public policy
+updates.</p>
+<h2 id="why-now">Why now</h2>
+<p>Payers are automating review and prior authorization, providers are
+reporting higher administrative cost, and CMS rules are pushing the
+ecosystem toward more transparent, API-enabled prior authorization.
+Independent practices need a practical bridge now: a product that works
+with exports and staff workflows today, then becomes the integration
+layer tomorrow.</p>
+<h2 id="demo-credentials">Demo credentials</h2>
+<ul>
+<li>Practice dashboard: practice@claimguard.demo / DemoPass!2026</li>
+<li>Admin dashboard: admin@claimguard.demo / AdminPass!2026</li>
+</ul>
+</body>
+</html>
